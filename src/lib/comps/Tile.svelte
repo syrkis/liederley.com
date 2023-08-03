@@ -17,13 +17,10 @@
     /* format price with commas and decimals */
     item.price = item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     
-    console.log(item.images)
-
 </script>
 
 <a href='/{item.slug}'>
 <div class='piece'>
-    <div class='img' style='background-image: url({item.images[0]})'></div>
     <img class="image" src={item.images[0].image} alt={item.title}/>
     <div class='productHeader'>
         <p>{item.title}</p> <span>{item.price} €</span>

@@ -3,6 +3,8 @@
 
 	export let data: PageData;
 	let formatedPrice = data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+	console.log(data);
 </script>
 
 <div class="container">
@@ -51,9 +53,9 @@
 		
 	</div>
 	<div class='gallery'>
-		<div class='img' style='background-image: url({data.images[0]})'></div>
+		<div class='img' style='background-image: url({data.images[0].image})'></div>
 		<br/><br/><br/>
-		<div class='img' style='background-image: url({data.images[1]})'></div>
+		<div class='img' style='background-image: url({data.images[1].image})'></div>
 	</div>
 </div>
 
