@@ -30,7 +30,6 @@ collections:
           - name: "image"
             label: "Image"
             widget: "image"
-        widget: "text"
       - name: "price"
         label: "Price"
         widget: "number"
