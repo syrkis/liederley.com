@@ -3,14 +3,15 @@
 	import { onMount } from 'svelte';
 
 	let form;
+	let isFormSubmitted = false; // Add this line
 
 	onMount(() => {
 		form.addEventListener('submit', function(event) {
 			event.preventDefault();
+			isFormSubmitted = true; // Set this to true when form is submitted
 			// Process form data here...
 		});
 	});
-
 
 	export let data: PageData;
 	let formatedPrice = data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -33,28 +34,32 @@
 				{data.body}
 			</p>
 		</div>
-		<form bind:this={form}>
-			<div class='input'>
-				<div>
-					<label for="name">Name* :</label>
-					<input id="name" type='text' />
+		{#if !isFormSubmitted}
+			<form bind:this={form} data-netlify="true" name="contact" method="POST">
+				<div class='input'>
+					<div>
+						<label for="name">Name* :</label>
+						<input id="name" type='text' />
+					</div>
+					<div>
+						<label for="mail">Mail* :</label>
+						<input id="mail" type='text' />
+					</div>
+					<div>
+						<label for="note">Note :</label>
+						<input id="note" type='text' />
+					</div>
+					<div class='button-container'>
+						<button type="submit">Request Purchase</button>
+					</div>
 				</div>
-				<div>
-					<label for="mail">Mail* :</label>
-					<input id="mail" type='text' />
-				</div>
-				<div>
-					<label for="note">Note :</label>
-					<input id="note" type='text' />
-				</div>
-				<div class='button-container'>
-					<button type="submit">Request Purchase</button>
-				</div>
+			</form>
+		{:else}
+			<div class="success-message">
+				<h2>Thank you for your request!</h2>
+				<p>We have received your purchase request and will be in touch soon.</p>
 			</div>
-	</form>
-		
-		
-		
+		{/if}
 	</div>
 	<div class='gallery'>
 		<div class='img' style='background-image: url({data.images[0].image})'></div>
@@ -64,6 +69,13 @@
 </div>
 
 <style>
+    /* your previous styles... */
+    
+    .success-message {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 50px;
+    }
 
 .button-container {
     display: grid;
