@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: master
-  repo: syrkis/liederley
+  repo: syrkis/liederley.com
   site_domain: liederley.com
 
 media_folder: static/images
