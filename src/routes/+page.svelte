@@ -56,8 +56,8 @@
   }
 
   .logo {
-    padding-top: 35vh;
-    padding-bottom: 10vh;
+    padding-top: 40vh;
+    padding-bottom: 25vh;
     text-align: center;
   }
 
