@@ -3,6 +3,7 @@ slug: spiral-skirt
 title: Bias Cut Spiral Skirt
 images:
   - image: /images/BIAS CUT SPIRAL SKIRT.jpg
+  - image: /images/BIAS CUT SPIRAL SKIRT.jpg
 price: 380
 measurements:
   - measurement: Height
