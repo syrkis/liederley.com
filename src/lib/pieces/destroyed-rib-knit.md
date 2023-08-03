@@ -12,9 +12,9 @@ measurements:
   - measurement: Waist
   - measurement: Arm length
 ---
-Knitted sweater composed of numerous rows of distressed rib
-Military cut featuring a high collar
+Knitted sweater composed of numerous rows of distressed rib.
+Military cut featuring a high collar.
 
-Available in alpaca or canberra
+Available in alpaca or canberra.
 
-P﻿lease specify material preference upon request
+P﻿lease specify material preference upon request.
