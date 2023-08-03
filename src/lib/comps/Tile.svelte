@@ -22,8 +22,8 @@
 
 <a href='/{item.slug}'>
 <div class='piece'>
-    <div class='img' style='background-image: url({item.image})'></div>
-    <img class="image" src={item.image} alt={item.title}/>
+    <div class='img' style='background-image: url({item.images[0]})'></div>
+    <img class="image" src={item.images[0]} alt={item.title}/>
     <div class='productHeader'>
         <p>{item.title}</p> <span>{item.price} €</span>
     </div> 

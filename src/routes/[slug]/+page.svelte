@@ -51,9 +51,9 @@
 		
 	</div>
 	<div class='gallery'>
-		<div class='img' style='background-image: url({data.image})'></div>
+		<div class='img' style='background-image: url({data.images[0]})'></div>
 		<br/><br/><br/>
-		<div class='img' style='background-image: url({data.image})'></div>
+		<div class='img' style='background-image: url({data.images[1]})'></div>
 	</div>
 </div>
 
