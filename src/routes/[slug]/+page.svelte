@@ -17,18 +17,15 @@
 		</div>
 		<div class='text'>
 			<p>
-				lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				{data.body}
 			</p>
 		</div>
 		<br/><br/>
 		<div class='input'>
+			<h3>Personal Information:</h3>
 			<div>
 				<label for="name">Name :</label>
 				<input id="name" type='text' />
-			</div>
-			<div>
-				<label for="measures">Measures :</label>
-				<input id="measures" type='text' />
 			</div>
 			<div>
 				<label for="mail">Mail :</label>
@@ -38,6 +35,16 @@
 				<label for="address">Address :</label>
 				<input id="address" type='text' />
 			</div>
+			<br/>
+			<h3>Measurements:</h3>	
+			{#each data.measures as measure}
+				<div>
+					<label for="name">{measure} :</label>
+					<input id="name" type='text' />
+				</div>
+			{/each}
+			<br/><br/>
+			<button>Purchase</button>
 		</div>
 		
 		
@@ -52,9 +59,49 @@
 
 <style>
 
+.input button {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+	font-family: 'Crimson Pro', serif;
+    transition: background-color 0.3s ease;
+    outline: none;  /* Removes the outline on focus */
+}
+
+.input button:hover {
+    background-color: black;
+    color: white;
+	border: 2px solid white;
+}
+
+.input button:active {
+    background-color: black;
+    color: white;
+}
+
+	h3 {
+		font-weight: normal;
+		text-align: left;
+		line-height: 1em;
+		font-size: 1em;
+	}
+
+	.measurements {
+		padding-top: 20px;
+
+	}
 	.form {
 		width: 95%;
 		max-width: 450px;
+		margin: auto;
+	}
+
+	.gallery {
+		width: 95%;
+		max-width: 600px;
 		margin: auto;
 	}
 

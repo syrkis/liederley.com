@@ -27,9 +27,6 @@
     <div class='productHeader'>
         <p>{item.title}</p> <span>{item.price} €</span>
     </div> 
-    <div class='description'>
-        <p>{item.body}</p>
-    </div>
 </div>
 </a>
 
