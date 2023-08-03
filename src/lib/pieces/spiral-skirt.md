@@ -1,11 +1,13 @@
 ---
 slug: spiral-skirt
-title: Bias Cut Spiral Skirt 
-price: 380
+title: Bias Cut Spiral Skirt
 images:
-  - image: /images/kn02r01.jpg
-  - image: /images/kn02r01.jpg
+  - image: /images/BIAS CUT SPIRAL SKIRT.jpg
+price: 380
 measurements:
-  - measurement: Girth
+  - measurement: Height
+  - measurement: Waist
+  - measurement: Hips
+  - measurement: Length (waist-floor)
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultricies, nunc nisl aliquam nunc, vitae aliquam
+Bias cut skirt in silk crepe
