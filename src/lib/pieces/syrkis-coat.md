@@ -1,10 +1,10 @@
 ---
 slug: syrkis-coat
 title: Syrkis Coat
+price: 666
 images:
   - image: /images/kn02r01.jpg
   - image: /images/kn02r01.jpg
-price: 666
 measurements:
   - measurement: Girth
 ---

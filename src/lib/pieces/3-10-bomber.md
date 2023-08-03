@@ -5,6 +5,7 @@ price: 1400
 images:
   - image: /images/kn02r01.jpg
   - image: /images/kn02r01.jpg
-measures: [Height, Waist, Hip, Outseam]
+measurements:
+  - measurement: Girth
 ---
 afksds

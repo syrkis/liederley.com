@@ -4,5 +4,5 @@ export interface Piece {
 	  body: string;
 	  images: [string];
 	  price: string;
-	  measures: [string];
+	  measurements: [string];
 }

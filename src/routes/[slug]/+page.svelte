@@ -39,7 +39,7 @@
 			</div>
 			<br/>
 			<h3>Measurements:</h3>	
-			{#each data.measures as measure}
+			{#each data.measurements as measure}
 				<div>
 					<label for="name">{measure} :</label>
 					<input id="name" type='text' />

@@ -16,6 +16,6 @@ export const load: PageServerLoad = async ({ params }) => {
     body: post.body,
     images: post.attributes.images,
     price: post.attributes.price,
-    measures: post.attributes.measures,
+    measurements: post.attributes.measurements,
   };
 };
