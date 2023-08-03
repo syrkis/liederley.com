@@ -28,7 +28,7 @@
             filter: invert(1);
             background-color: white;
         }
-        :global(img) {
+        :global(img, .img) {
             filter: invert(1);
         }
     }
@@ -47,9 +47,8 @@
     :global(h2) {
         font-size: 1.3rem;
         font-weight: 300;
-        margin-bottom: 0;
+        margin: 0;
         letter-spacing: 0.1em;
-        padding-top: 3rem;
     }
 
     :global(hr) {

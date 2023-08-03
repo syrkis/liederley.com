@@ -5,14 +5,12 @@
     import VanillaTilt from "vanilla-tilt";
     export let item: Piece; 
 
-    /* format data. month and year only */
-    /* add tilt effect to post */
     onMount(() => {
         VanillaTilt.init(document.querySelectorAll(".piece"), {
             max: 0.0001,
             speed: 7000,
             reverse: true,
-            scale: 1.04
+            scale: 1.01
         });
     });
 
@@ -22,7 +20,8 @@
 
 </script>
 
-<div class="piece">
+<a href='/{item.slug}'>
+<div class='piece'>
     <div class='img' style='background-image: url({item.image})'></div>
     <img class="image" src={item.image} alt={item.title}/>
     <div class='productHeader'>
@@ -32,6 +31,7 @@
         <p>{item.body}</p>
     </div>
 </div>
+</a>
 
 <style>
     
@@ -53,7 +53,7 @@
 
     img {
         width: 100%;
-        height: 100%;
+        height: 80%;
         object-fit: cover;
     }
 
@@ -63,6 +63,8 @@
         max-width: 95%;
         padding: 10vh 5vh;
         overflow: hidden;
+        /* cursoer clickable on hover*/
+        cursor: pointer;
     }
 
 </style>

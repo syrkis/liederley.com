@@ -1,7 +1,4 @@
 <script>
-    let links = [
-        ["fab fa-instagram", "instagram.com/frederiklovric"],
-    ];
 </script>
 
 <div class="footer">
@@ -9,13 +6,19 @@
         for all enquiries, write
         <br/>
         <a href="mailto:desk@liederley.com">desk@liederley.com</a><br/>
-        {#each links as link}
-                <a href="https://{link[1]}" rel='noreferrer' target="_blank" class="{link[0]}"> </a>
-        {/each}<br/>
+        
+        <div class="virian">
+        </div>
     </footer>
 </div>
 
 <style>
+
+    .virian {
+        color: black;
+        background: white;
+        width: 100%;
+    }
     /* footer in bottom of screen or page */
     .divider {
         padding: 15px 0;
@@ -27,7 +30,6 @@
         line-height: 3rem;
         width: 100%;
         text-align: center;
-        padding-bottom: 100px;
     }
     .fab, .far, .fas {
         padding: 0 10px;

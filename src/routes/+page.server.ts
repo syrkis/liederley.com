@@ -18,6 +18,7 @@ export const load: PageServerLoad = async () => {
         body: post.body,
         image: post.attributes.image,
         price: post.attributes.price,
+        slug: post.attributes.slug,
       };
     }).sort((a, b) => new Date(b.start).getTime() - new Date(a.start).getTime());
 

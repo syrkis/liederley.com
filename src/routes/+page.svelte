@@ -8,17 +8,12 @@
 </script>
 
 <div class="container">
-  <div class='logo-container'>
-    <h1 class='logo'>
+  <div class='logo'>
+    <h1>
       FREDERIK
-      <br/>
       LIEDERLEY
     </h1>
-    <div class='text'>
-      <p>
-        Bespoke garments available upon request.
-      </p>
-    </div>
+    <span>MILANO / ANTWERP</span>
   </div>
   <div class='pieces'>
     {#each data.body as piece}
@@ -28,6 +23,12 @@
     {/each}
   </div>
 </div>
+
+<svelte:head>
+  <title>FREDERIK LIEDERLEY</title>
+  <meta name="description" content="Frederik Liederley is a bespoke designer based in Milano, Italy.">
+  <meta name="keywords" content="Frederik Liederley, tailor, bespoke, Antwerp, Belgium, Milano, Italy">
+</svelte:head>
 
 <style>
 
@@ -58,23 +59,14 @@
   }
 
   h1 {
-    padding-top: 35vh;
     letter-spacing: 0.3em;
     line-height: 1.5em;
   }
 
-:global(hr) {
-        width: 100%;
-        margin: 0 auto;
-        border: 0.5px solid white;
-    }
-
-    :global(.divider) {
-        width: 200px;
-        margin: auto;
-        padding: 100px 0 0 0;
-        text-align: center;
-        padding-bottom: 80px;
-    }
+  .logo {
+    padding-top: 35vh;
+    padding-bottom: 10vh;
+    text-align: center;
+  }
 
 </style>
