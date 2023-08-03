@@ -8,4 +8,4 @@ images:
 measurements:
   - measurement: Girth
 ---
-afksds
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl

@@ -1,5 +1,16 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { onMount } from 'svelte';
+
+	let form;
+
+	onMount(() => {
+		form.addEventListener('submit', function(event) {
+			event.preventDefault();
+			// Process form data here...
+		});
+	});
+
 
 	export let data: PageData;
 	let formatedPrice = data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -22,32 +33,25 @@
 				{data.body}
 			</p>
 		</div>
-		<br/><br/>
-		<div class='input'>
-			<h3>Personal Information:</h3>
-			<div>
-				<label for="name">Name :</label>
-				<input id="name" type='text' />
-			</div>
-			<div>
-				<label for="mail">Mail :</label>
-				<input id="mail" type='text' />
-			</div>
-			<div>
-				<label for="address">Address :</label>
-				<input id="address" type='text' />
-			</div>
-			<br/>
-			<h3>Measurements:</h3>	
-			{#each data.measurements as measure}
+		<form bind:this={form}>
+			<div class='input'>
 				<div>
-					<label for="name">{measure.measurement} :</label>
+					<label for="name">Name* :</label>
 					<input id="name" type='text' />
 				</div>
-			{/each}
-			<br/><br/>
-			<button>Purchase</button>
-		</div>
+				<div>
+					<label for="mail">Mail* :</label>
+					<input id="mail" type='text' />
+				</div>
+				<div>
+					<label for="note">Note :</label>
+					<input id="note" type='text' />
+				</div>
+				<div class='button-container'>
+					<button type="submit">Request Purchase</button>
+				</div>
+			</div>
+	</form>
 		
 		
 		
@@ -61,17 +65,28 @@
 
 <style>
 
+.button-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
 .input button {
+    grid-column-start: 2;
+	width: 100%;
     border: 2px solid black;
     background-color: white;
     color: black;
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
-	font-family: 'Crimson Pro', serif;
+    font-family: 'Crimson Pro', serif;
     transition: background-color 0.3s ease;
     outline: none;  /* Removes the outline on focus */
+    margin-top: 50px;
+    align-self: start; /* To align the button to the top of the container */
+    justify-self: start; /* To align the button to the left side of its column */
 }
+
 
 .input button:hover {
     background-color: black;
@@ -159,6 +174,7 @@
 	.input {
     display: grid;
     gap: 10px;
+	padding: 50px 0;
 }
 
 .input div {
