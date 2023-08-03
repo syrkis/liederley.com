@@ -16,7 +16,9 @@ collections:
     fields:
       - { name: "slug", label: "Slug", widget: "string" }
       - { name: "title", label: "Title", widget: "string" }
-      - { name: "image", label: "Image", widget: "image" }
+      - { name: "images", label: "Images", widget: "list", fields: [
+        { name: "image", label: "Image", widget: "image" },
+      ]}
       - { name: "description", label: "Description", widget: "text" }
       - { name: "price", label: "Price", widget: "number" }
       - { name: "measurements", label: "Measurements", widget: "list", fields: [
