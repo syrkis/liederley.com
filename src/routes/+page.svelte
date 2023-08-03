@@ -46,13 +46,6 @@
     }
   }
 
-  .text {
-    padding-top: 10vh;
-    width: 95%;
-    max-width: 500px;
-    margin: auto;
-  }
-
   :global(body) {
     font-family: 'Crimson Pro', serif;
   }

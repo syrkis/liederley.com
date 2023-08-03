@@ -30,15 +30,6 @@
 
 <style>
     
-    .img {
-        background: no-repeat center center;
-    }
-
-    .description {
-        text-align: left;
-        padding: 0 10px;
-    }
-
     .productHeader {
         display: flex;
         justify-content: space-between;
@@ -56,7 +47,7 @@
         height: 70vh;
         margin: auto;
         max-width: 95%;
-        padding: 10vh 5vh;
+        padding: 0vh 5vh;
         overflow: hidden;
         /* cursoer clickable on hover*/
         cursor: pointer;
