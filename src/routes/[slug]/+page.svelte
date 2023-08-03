@@ -97,7 +97,7 @@
 	}
 	.form {
 		width: 95%;
-		max-width: 450px;
+		max-width: 500px;
 		margin: auto;
 	}
 
@@ -113,7 +113,7 @@
 	.title {
 		padding-bottom: 50px;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 4fr 1fr;
 	}
 
 	.text {
@@ -163,7 +163,7 @@
 
 .input div {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     align-items: center;
 }
 

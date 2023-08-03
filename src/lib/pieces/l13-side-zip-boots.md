@@ -2,8 +2,8 @@
 slug: l13-side-zip-boots
 title: L13 Side Zip Boots
 images:
-  - image: /images/HORSE LEATHER BOOTS.jpg
-  - image: /images/horse leather boots BACK.jpg
+  - image: /images/horse-leather-boots.jpg
+  - image: /images/horse-leather-boots-back.jpg
 price: 1630
 measurements:
   - measurement: Shoe size
