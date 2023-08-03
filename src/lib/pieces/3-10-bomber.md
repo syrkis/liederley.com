@@ -1,11 +1,19 @@
 ---
-slug: 3-10-bomber
-title: 3.10 Bomber in Horse Leather
-price: 1400
+slug: l06-bomber
+title: L06 Bomber in Horse Leather
 images:
-  - image: /images/kn02r01.jpg
-  - image: /images/kn02r01.jpg
+  - image: /images/BOMBER COVER IMAGE.jpg
+  - image: /images/l05 BOMBER BACK2.jpg
+price: 1400
 measurements:
-  - measurement: Girth
+  - measurement: Height
+  - measurement: Shoulder
+  - measurement: Arm length
 ---
-afksds
+Asymmetric bomber jacket cut in horse leather. 
+
+K﻿imono-sleeve construction
+
+
+
+M﻿ACOL22/23
