@@ -56,7 +56,7 @@
 			</form>
 		{:else}
 			<div class="success-message">
-				<h2>Thank you for your request!</h2>
+				<h2>Thank you for your request</h2>
 				<p>We have received your purchase request and will be in touch soon.</p>
 			</div>
 		{/if}

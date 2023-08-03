@@ -6,7 +6,6 @@
         for all enquiries, write
         <br/>
         <a href="mailto:desk@liederley.com">desk@liederley.com</a><br/>
-        
         <div class="virian">
         </div>
     </footer>
