@@ -5,4 +5,5 @@ export interface Piece {
 	  images: [string];
 	  price: string;
 	  measurements: [string];
+	  published: boolean;
 }

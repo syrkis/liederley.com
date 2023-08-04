@@ -1,4 +1,5 @@
 ---
+published: true
 slug: l06-bomber
 title: L06 Bomber in Horse Leather
 images:

@@ -1,4 +1,5 @@
 ---
+publushed: true
 slug: kn04-dress
 title: KN04 Dress
 images:

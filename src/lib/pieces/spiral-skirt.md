@@ -1,4 +1,6 @@
 ---
+published: true
+
 slug: spiral-skirt
 title: Bias Cut Spiral Skirt
 images:

@@ -1,4 +1,5 @@
 ---
+published: true
 slug: a1-maxi-dress
 title: Draped Maxi-dress
 images:

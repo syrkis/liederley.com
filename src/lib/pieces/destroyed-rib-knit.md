@@ -1,4 +1,5 @@
 ---
+published: true
 slug: destroyed-rib-knit
 title: Destroyed Rib Knit
 images:

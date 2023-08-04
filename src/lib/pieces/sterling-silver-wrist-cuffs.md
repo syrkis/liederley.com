@@ -1,4 +1,5 @@
 ---
+published: true
 slug: sterling-silver-bracelet
 title: Sterling Silver wrist cuffs
 images:

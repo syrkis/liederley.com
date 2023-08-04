@@ -1,4 +1,5 @@
 ---
+published: true
 slug: t08-tulip-coat
 title: T08 Tulip Coat
 images:

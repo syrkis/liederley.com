@@ -19,8 +19,9 @@ export const load: PageServerLoad = async () => {
         images: post.attributes.images,
         price: post.attributes.price,
         slug: post.attributes.slug,
+        published: post.attributes.published,
       };
-    }).sort((a, b) => new Date(b.start).getTime() - new Date(a.start).getTime());
+    }).filter((post) => post.published);
 
   return {
     body: posts,

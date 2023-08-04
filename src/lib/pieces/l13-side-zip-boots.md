@@ -1,4 +1,5 @@
 ---
+published: true
 slug: l13-side-zip-boots
 title: L13 Side Zip Boots
 images:
