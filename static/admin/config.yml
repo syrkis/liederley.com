@@ -26,6 +26,7 @@ collections:
       - name: "published"
         label: "Published"
         widget: "boolean"
+        default: true
       - name: "images"
         label: "Images"
         widget: "list"
