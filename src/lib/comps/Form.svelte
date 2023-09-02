@@ -54,7 +54,7 @@
     <input type="hidden" name="_next" value="/success">
     <div class="form-group button">
         <div></div>
-        <button type="submit">Request purchase (we'll follow up for measures)</button>
+        <button type="submit">Request purchase (we'll contact you)</button>
     </div>
 </form>
 {:else}

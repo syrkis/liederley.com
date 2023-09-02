@@ -13,7 +13,7 @@ measurements:
   - measurement: Waist
   - measurement: Hip
 ---
-A﻿symmetric draped maxi-dress in horse.
+Asymmetric draped maxi-dress in horse.
 
 B﻿ack zip closure. Lined in 100% Cotton. Raw hem. 
 
