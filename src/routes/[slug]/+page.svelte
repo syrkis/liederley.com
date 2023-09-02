@@ -8,24 +8,25 @@
 	let nImages = data.images.length;
   
 	const handleSubmit = async event => {
-	  event.preventDefault();
-	  const myForm = event.target;
-	  const formData = new FormData(myForm);
-	  try {
-		const response = await fetch("/", {
-		  method: "POST",
-		  headers: { "Content-Type": "application/x-www-form-urlencoded" },
-		  body: new URLSearchParams(formData).toString(),
-		});
-		if (response.ok) {
-		  console.log("Form successfully submitted");
-		} else {
-		  console.error("Error: ", response);
-		}
-	  } catch (error) {
-		console.error("Error: ", error);
-	  }
-	};
+  event.preventDefault();
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+
+  try {
+    const response = await fetch('/.netlify/functions/handleSubmit', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (response.ok) {
+      console.log('Form successfully submitted');
+    } else {
+      console.error('Error:', response);
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
   </script>
   
   <div class="container">
