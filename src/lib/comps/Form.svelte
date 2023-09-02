@@ -1,21 +1,34 @@
 <script>
-    import { onMount } from "svelte";
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      const formData = new FormData(event.target);
   
-    let formHtml = "";
+      try {
+        const response = await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        });
   
-    onMount(async () => {
-      const response = await fetch("/form.html");
-      formHtml = await response.text();
-    });
+        if (response.ok) {
+          console.log("Form successfully submitted");
+        } else {
+          console.log("Form submission failed");
+        }
+      } catch (error) {
+        console.log("An error occurred:", error);
+      }
+    };
   </script>
   
-    <form name="contactForm" action="/success" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contactForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        
-        <button type="submit">Submitttt</button>
-    </form>
+  <form on:submit={handleSubmit}>
+    <input type="hidden" name="form-name" value="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    
+    <button type="submit">Submit</button>
+  </form>
+  
