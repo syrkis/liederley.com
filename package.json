@@ -20,6 +20,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-netlify": "^2.0.8",
 		"front-matter": "^4.0.2",
 		"vanilla-tilt": "^1.8.0"
 	}

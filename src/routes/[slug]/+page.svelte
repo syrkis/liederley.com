@@ -7,6 +7,25 @@
 
 	let nImages = data.images.length;
 	
+	const handleSubmit = async event => {
+    event.preventDefault();
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+      if (response.ok) {
+        console.log("Form successfully submitted");
+      } else {
+        console.error("Error: ", response);
+      }
+    } catch (error) {
+      console.error("Error: ", error);
+    }
+  };
 
 </script>
 
@@ -25,27 +44,28 @@
 				{data.body}
 			</p>
 		</div>
-		
-		<form name="contact" method="POST" data-netlify="true" action="/">
-			<input type="hidden" name="form-name" value="contact" />
-			<div class='input'>
-			  <div>
-				<label for="name">Name* :</label>
-				<input id="name" name="name" type='text' required />
-			  </div>
-			  <div>
-				<label for="mail">Mail* :</label>
-				<input id="mail" name="email" type='email' required />
-			  </div>
-			  <div>
-				<label for="note">Note :</label>
-				<input id="note" name="note" type='text' />
-			  </div>
-			  <div class='button-container'>
-				<button type="submit">Request Purchase</button>
-			  </div>
-			</div>
-		</form>
+
+<form on:submit="{handleSubmit}">
+<input type="hidden" name="form-name" value="contact">
+  <div class="input">
+    <div>
+      <label for="name">Name*: </label>
+      <input id="name" name="name" type="text" required />
+    </div>
+    <div>
+      <label for="mail">Mail*: </label>
+      <input id="mail" name="email" type="email" required />
+    </div>
+    <div>
+      <label for="note">Note: </label>
+      <input id="note" name=" ```html
+note" type="text" />
+    </div>
+    <div class="button-container">
+      <button type="submit">Request Purchase</button>
+    </div>
+  </div>
+</form>
 		
 		
 	</div>
