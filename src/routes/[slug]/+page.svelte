@@ -27,7 +27,7 @@
 			</p>
 		</div>
 
-		<Form />
+		<Form piece={data.title} />
 		  
 	</div>
 	<div class='gallery'>
