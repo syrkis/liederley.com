@@ -2,17 +2,6 @@
 	import type { PageData } from './$types';
 	import { onMount } from 'svelte';
 
-	let form;
-	let isFormSubmitted = false; // Add this line
-
-	onMount(() => {
-		form.addEventListener('submit', function(event) {
-			event.preventDefault();
-			isFormSubmitted = true; // Set this to true when form is submitted
-			// Process form data here...
-		});
-	});
-
 	export let data: PageData;
 	let formatedPrice = data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
@@ -35,8 +24,7 @@
 				{data.body}
 			</p>
 		</div>
-		{#if !isFormSubmitted}
-			<form bind:this={form} name="contact" netlify>
+			<form method="POST" data-netlify="true">
 				<div class='input'>
 					<div>
 						<label for="name">Name* :</label>
@@ -55,12 +43,6 @@
 					</div>
 				</div>
 			</form>
-		{:else}
-			<div class="success-message">
-				<h2>Thank you for your request</h2>
-				<p>We have received your purchase request and will be in touch soon.</p>
-			</div>
-		{/if}
 	</div>
 	<div class='gallery'>
 		<div class='img' style='background-image: url({data.images[0].image})'></div>
