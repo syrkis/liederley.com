@@ -58,8 +58,7 @@
     </div>
     <div>
       <label for="note">Note: </label>
-      <input id="note" name=" ```html
-note" type="text" />
+	  <input id="note" name="note" type="text" />
     </div>
     <div class="button-container">
       <button type="submit">Request Purchase</button>
