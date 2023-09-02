@@ -45,7 +45,7 @@
 			</p>
 		</div>
 
-<form on:submit="{handleSubmit}">
+<form on:submit="{handleSubmit}" netlify>
 <input type="hidden" name="form-name" value="contact">
   <div class="input">
     <div>
