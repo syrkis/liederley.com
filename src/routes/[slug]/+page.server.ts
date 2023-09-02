@@ -1,5 +1,3 @@
-export const prerender = true
-
 import type { PageServerLoad } from './$types';
 import fs from 'fs';
 import fm from 'front-matter';
