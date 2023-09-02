@@ -33,7 +33,7 @@
 				</div>
 				<div>
 					<label for="mail">Mail* :</label>
-					<input id="mail" name="email" type='text' />
+					<input id="mail" name="email" type='email' />
 				</div>
 				<div>
 					<label for="note">Note :</label>
