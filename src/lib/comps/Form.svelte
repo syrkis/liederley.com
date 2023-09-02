@@ -21,7 +21,7 @@
     };
   </script>
   
-  <form on:submit={handleSubmit}>
+  <form on:submit={handleSubmit} name="contactForm" method="POST" data-netlify="true">
     <input type="hidden" name="form-name" value="contactForm">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name">
