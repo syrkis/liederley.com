@@ -27,7 +27,7 @@
 			</p>
 		</div>
 
-		<Form piece={data.title} />
+		<Form piece={data.title} price={data.price} />
 		  
 	</div>
 	<div class='gallery'>
@@ -40,57 +40,6 @@
 <style>
     /* your previous styles... */
     
-    .success-message {
-        font-size: 20px;
-        text-align: center;
-        margin-top: 50px;
-    }
-
-.button-container {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-}
-
-.input button {
-    grid-column-start: 2;
-	width: 100%;
-    border: 2px solid black;
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    font-family: 'Crimson Pro', serif;
-    transition: background-color 0.3s ease;
-    outline: none;  /* Removes the outline on focus */
-    margin-top: 50px;
-    align-self: start; /* To align the button to the top of the container */
-    justify-self: start; /* To align the button to the left side of its column */
-}
-
-
-.input button:hover {
-    background-color: black;
-    color: white;
-	border: 2px solid white;
-}
-
-.input button:active {
-    background-color: black;
-    color: white;
-}
-
-	h3 {
-		font-weight: normal;
-		text-align: left;
-		line-height: 1em;
-		font-size: 1em;
-	}
-
-	.measurements {
-		padding-top: 20px;
-
-	}
 	.form {
 		width: 95%;
 		max-width: 500px;
@@ -152,34 +101,5 @@
 	}
 
 
-	.input {
-    display: grid;
-    gap: 10px;
-	padding: 50px 0;
-}
-
-.input div {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    align-items: center;
-}
-
-.input label {
-    color: white;
-    text-align: right;
-    padding-right: 10px;
-}
-
-.input input[type='text'] {
-	border: none;
-    border-bottom: 2px solid white;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    font-size: 18px;
-    caret-color: white;
-	outline: none;
-
-}
 
 </style>
