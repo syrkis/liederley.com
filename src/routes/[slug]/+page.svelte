@@ -45,26 +45,34 @@
 			</p>
 		</div>
 
-<form on:submit="{handleSubmit}" netlify>
-<input type="hidden" name="form-name" value="contact">
-  <div class="input">
-    <div>
-      <label for="name">Name*: </label>
-      <input id="name" name="name" type="text" required />
-    </div>
-    <div>
-      <label for="mail">Mail*: </label>
-      <input id="mail" name="email" type="email" required />
-    </div>
-    <div>
-      <label for="note">Note: </label>
-	  <input id="note" name="note" type="text" />
-    </div>
-    <div class="button-container">
-      <button type="submit">Request Purchase</button>
-    </div>
-  </div>
-</form>
+		<form name="contact" netlify netlify-honeypot="bot-field" hidden>
+			<input type="hidden" name="form-name" value="contact">
+			<input type="text" name="name">
+			<input type="email" name="email">
+			<input type="text" name="note">
+		  </form>
+		  
+		  <form on:submit="{handleSubmit}" netlify>
+		  <input type="hidden" name="form-name" value="contact">
+			<div class="input">
+			  <div>
+				<label for="name">Name*: </label>
+				<input id="name" name="name" type="text" required />
+			  </div>
+			  <div>
+				<label for="mail">Mail*: </label>
+				<input id="mail" name="email" type="email" required />
+			  </div>
+			  <div>
+				<label for="note">Note: </label>
+				<input id="note" name="note" type="text" />
+			  </div>
+			  <div class="button-container">
+				<button type="submit">Request Purchase</button>
+			  </div>
+			</div>
+		  </form>
+		  
 		
 		
 	</div>
