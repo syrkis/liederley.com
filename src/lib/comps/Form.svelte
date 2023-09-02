@@ -9,7 +9,13 @@
     });
   </script>
   
-  <div id="dynamic-form-container">
-    {@html formHtml}
-  </div>
-  
+    <form name="contactForm" action="/success" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        
+        <button type="submit">Submitttt</button>
+    </form>
