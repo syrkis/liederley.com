@@ -1,87 +1,77 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { onMount } from 'svelte';
-
+  
 	export let data: PageData;
-	let formatedPrice = data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
+	let formattedPrice = data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  
 	let nImages = data.images.length;
-	
+  
 	const handleSubmit = async event => {
-    event.preventDefault();
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-    try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
-      });
-      if (response.ok) {
-        console.log("Form successfully submitted");
-      } else {
-        console.error("Error: ", response);
-      }
-    } catch (error) {
-      console.error("Error: ", error);
-    }
-  };
-
-</script>
-
-<div class="container">
+	  event.preventDefault();
+	  const myForm = event.target;
+	  const formData = new FormData(myForm);
+	  try {
+		const response = await fetch("/", {
+		  method: "POST",
+		  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+		  body: new URLSearchParams(formData).toString(),
+		});
+		if (response.ok) {
+		  console.log("Form successfully submitted");
+		} else {
+		  console.error("Error: ", response);
+		}
+	  } catch (error) {
+		console.error("Error: ", error);
+	  }
+	};
+  </script>
+  
+  <div class="container">
 	<div class='form'>
-		<div class='title'>
-			<h2 class='left'>
-				{data.title}
-			</h2>
-			<span class='right'>
-				€ {formatedPrice}
-			</span>
+	  <div class='title'>
+		<h2 class='left'>
+		  {data.title}
+		</h2>
+		<span class='right'>
+		  € {formattedPrice}
+		</span>
+	  </div>
+	  <div class='text'>
+		<p>
+		  {data.body}
+		</p>
+	  </div>
+	  
+	  <form on:submit={handleSubmit} netlify>
+		<input type="hidden" name="form-name" value="contact">
+		<div class="input">
+		  <div>
+			<label for="name">Name*: </label>
+			<input id="name" name="name" type="text" required />
+		  </div>
+		  <div>
+			<label for="mail">Mail*: </label>
+			<input id="mail" name="email" type="email" required />
+		  </div>
+		  <div>
+			<label for="note">Note: </label>
+			<input id="note" name="note" type="text" />
+		  </div>
+		  <div class="button-container">
+			<button type="submit">Request Purchase</button>
+		  </div>
 		</div>
-		<div class='text'>
-			<p>
-				{data.body}
-			</p>
-		</div>
-
-		<form name="contact" netlify netlify-honeypot="bot-field" hidden>
-			<input type="hidden" name="form-name" value="contact">
-			<input type="text" name="name">
-			<input type="email" name="email">
-			<input type="text" name="note">
-		  </form>
-		  
-		  <form on:submit="{handleSubmit}" netlify>
-		  <input type="hidden" name="form-name" value="contact">
-			<div class="input">
-			  <div>
-				<label for="name">Name*: </label>
-				<input id="name" name="name" type="text" required />
-			  </div>
-			  <div>
-				<label for="mail">Mail*: </label>
-				<input id="mail" name="email" type="email" required />
-			  </div>
-			  <div>
-				<label for="note">Note: </label>
-				<input id="note" name="note" type="text" />
-			  </div>
-			  <div class="button-container">
-				<button type="submit">Request Purchase</button>
-			  </div>
-			</div>
-		  </form>
-		  
-		
-		
+	  </form>
 	</div>
 	<div class='gallery'>
-		<div class='img' style='background-image: url({data.images[0].image})'></div>
-		<br/><br/><br/>
-		<div class='img' style='background-image: url({data.images[nImages - 1].image})'></div>
+	  <div class='img' style='background-image: url({data.images[0].image})'></div>
+	  <br/><br/><br/>
+	  <div class='img' style='background-image: url({data.images[nImages - 1].image})'></div>
 	</div>
-</div>
+  </div>
+  
 
 <style>
     /* your previous styles... */
