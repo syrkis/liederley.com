@@ -6,26 +6,7 @@
 	let formatedPrice = data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 	let nImages = data.images.length;
-
-	const handleSubmit = (event) => {
-  event.preventDefault();
-
-  const myForm = event.target;
-  const formData = new FormData(myForm);
-  
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => console.log("Form successfully submitted"))
-    .catch((error) => alert(error));
-};
-
-document
-  .querySelector("form")
-  .addEventListener("submit", handleSubmit);
-
+	
 
 </script>
 
@@ -44,25 +25,26 @@ document
 				{data.body}
 			</p>
 		</div>
-			<form method="POST" data-netlify="true">
-				<div class='input'>
-					<div>
-						<label for="name">Name* :</label>
-						<input id="name" type='text' />
-					</div>
-					<div>
-						<label for="mail">Mail* :</label>
-						<input id="mail" type='text' />
-					</div>
-					<div>
-						<label for="note">Note :</label>
-						<input id="note" type='text' />
-					</div>
-					<div class='button-container'>
-						<button type="submit">Request Purchase</button>
-					</div>
+		<form name="contact" method="POST" data-netlify="true">
+			<div class='input'>
+				<div>
+					<label for="name">Name* :</label>
+					<input id="name" name="name" type='text' />
 				</div>
-			</form>
+				<div>
+					<label for="mail">Mail* :</label>
+					<input id="mail" name="email" type='text' />
+				</div>
+				<div>
+					<label for="note">Note :</label>
+					<input id="note" name="note" type='text' />
+				</div>
+				<div class='button-container'>
+					<button type="submit">Request Purchase</button>
+				</div>
+			</div>
+		</form>
+		
 	</div>
 	<div class='gallery'>
 		<div class='img' style='background-image: url({data.images[0].image})'></div>
