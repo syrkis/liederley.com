@@ -1,10 +1,15 @@
-<form name="contactForm" action="/success" method="POST" data-netlify="true">
-    <input type="hidden" name="form-name" value="contactForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-    
-    <button type="submit">Submit</button>
-</form>
+<script>
+    import { onMount } from "svelte";
+  
+    let formHtml = "";
+  
+    onMount(async () => {
+      const response = await fetch("/form.html");
+      formHtml = await response.text();
+    });
+  </script>
+  
+  <div id="dynamic-form-container">
+    {@html formHtml}
+  </div>
+  

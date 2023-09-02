@@ -1,8 +1,7 @@
 <script lang="ts">
+	import Form from '$lib/comps/Form.svelte';
 	import type { PageData } from './$types';
 	import { onMount } from 'svelte';
-
-	import Form from '$lib/comps/Form.svelte';
 
 	export let data: PageData;
 	let formatedPrice = data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
