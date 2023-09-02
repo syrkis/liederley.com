@@ -1,78 +1,48 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { onMount } from 'svelte';
-  
+
 	export let data: PageData;
-	let formattedPrice = data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  
+	let formatedPrice = data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
 	let nImages = data.images.length;
-  
-	const handleSubmit = async event => {
-  event.preventDefault();
-  const myForm = event.target;
-  const formData = new FormData(myForm);
+	
 
-  try {
-    const response = await fetch('/.netlify/functions/handleSubmit', {
-      method: 'POST',
-      body: formData,
-    });
+</script>
 
-    if (response.ok) {
-      console.log('Form successfully submitted');
-    } else {
-      console.error('Error:', response);
-    }
-  } catch (error) {
-    console.error('Error:', error);
-  }
-};
-  </script>
-  
-  <div class="container">
+<div class="container">
 	<div class='form'>
-	  <div class='title'>
-		<h2 class='left'>
-		  {data.title}
-		</h2>
-		<span class='right'>
-		  € {formattedPrice}
-		</span>
-	  </div>
-	  <div class='text'>
-		<p>
-		  {data.body}
-		</p>
-	  </div>
-	  
-	  <form on:submit={handleSubmit} netlify>
-		<input type="hidden" name="form-name" value="contact">
-		<div class="input">
-		  <div>
-			<label for="name">Name*: </label>
-			<input id="name" name="name" type="text" required />
-		  </div>
-		  <div>
-			<label for="mail">Mail*: </label>
-			<input id="mail" name="email" type="email" required />
-		  </div>
-		  <div>
-			<label for="note">Note: </label>
-			<input id="note" name="note" type="text" />
-		  </div>
-		  <div class="button-container">
-			<button type="submit">Request Purchase</button>
-		  </div>
+		<div class='title'>
+			<h2 class='left'>
+				{data.title}
+			</h2>
+			<span class='right'>
+				€ {formatedPrice}
+			</span>
 		</div>
-	  </form>
+		<div class='text'>
+			<p>
+				{data.body}
+			</p>
+		</div>
+		<form name="netlify-form-example" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+			<input type="hidden" name="form-name" value="netlify-form-example" />
+			<label for="name">Name</label>
+			<input name="name" id="name" required placeholder="Name" type="text" />
+			<label for="email">Email</label>
+			<input name="email" id="email" required placeholder="Email" type="email" />
+			<label for="message">Message</label>
+			<input name="message" id="message" required placeholder="Message" type="text" />
+			<input type="submit" value="Submit" />
+		  </form>
+		  
 	</div>
 	<div class='gallery'>
-	  <div class='img' style='background-image: url({data.images[0].image})'></div>
-	  <br/><br/><br/>
-	  <div class='img' style='background-image: url({data.images[nImages - 1].image})'></div>
+		<div class='img' style='background-image: url({data.images[0].image})'></div>
+		<br/><br/><br/>
+		<div class='img' style='background-image: url({data.images[nImages - 1].image})'></div>
 	</div>
-  </div>
-  
+</div>
 
 <style>
     /* your previous styles... */
