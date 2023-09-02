@@ -25,25 +25,28 @@
 				{data.body}
 			</p>
 		</div>
-		<form name="contact" method="POST" data-netlify="true">
+		
+		<form name="contact" method="POST" data-netlify="true" action="/">
+			<input type="hidden" name="form-name" value="contact" />
 			<div class='input'>
-				<div>
-					<label for="name">Name* :</label>
-					<input id="name" name="name" type='text' />
-				</div>
-				<div>
-					<label for="mail">Mail* :</label>
-					<input id="mail" name="email" type='email' />
-				</div>
-				<div>
-					<label for="note">Note :</label>
-					<input id="note" name="note" type='text' />
-				</div>
-				<div class='button-container'>
-					<button type="submit">Request Purchase</button>
-				</div>
+			  <div>
+				<label for="name">Name* :</label>
+				<input id="name" name="name" type='text' required />
+			  </div>
+			  <div>
+				<label for="mail">Mail* :</label>
+				<input id="mail" name="email" type='email' required />
+			  </div>
+			  <div>
+				<label for="note">Note :</label>
+				<input id="note" name="note" type='text' />
+			  </div>
+			  <div class='button-container'>
+				<button type="submit">Request Purchase</button>
+			  </div>
 			</div>
 		</form>
+		
 		
 	</div>
 	<div class='gallery'>
