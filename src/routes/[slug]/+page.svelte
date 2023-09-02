@@ -36,7 +36,7 @@
 			</p>
 		</div>
 		{#if !isFormSubmitted}
-			<form bind:this={form} data-netlify="true" name="contact" method="POST">
+			<form bind:this={form} name="contact" netlify>
 				<div class='input'>
 					<div>
 						<label for="name">Name* :</label>
