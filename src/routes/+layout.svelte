@@ -6,7 +6,7 @@
 <Footer />
 
 <svelte:head>
-    <meta property="og:image" content="https://syrkis.ams3.digitaloceanspaces.com/files-bucket/17D7C226-0997-43D5-9022-D6FD3A0D16C1.png" />
+    <meta property="og:image" content="https://syrkis.ams3.digitaloceanspaces.com/files-bucket/8694B86B-6A4D-4089-AF33-260297F9F11F.png" />
     <meta property="og:title" content="FREDERIK LIEDERLEY" />
     <meta property="og:url" content="https://liederley.com" />
 </svelte:head>
