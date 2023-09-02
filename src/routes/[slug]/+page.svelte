@@ -2,6 +2,8 @@
 	import type { PageData } from './$types';
 	import { onMount } from 'svelte';
 
+	import Form from '$lib/comps/Form.svelte';
+
 	export let data: PageData;
 	let formatedPrice = data.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
@@ -25,16 +27,8 @@
 				{data.body}
 			</p>
 		</div>
-		<form name="netlify-form-example" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-			<input type="hidden" name="form-name" value="netlify-form-example" />
-			<label for="name">Name</label>
-			<input name="name" id="name" required placeholder="Name" type="text" />
-			<label for="email">Email</label>
-			<input name="email" id="email" required placeholder="Email" type="email" />
-			<label for="message">Message</label>
-			<input name="message" id="message" required placeholder="Message" type="text" />
-			<input type="submit" value="Submit" />
-		  </form>
+
+		<Form />
 		  
 	</div>
 	<div class='gallery'>
